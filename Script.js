@@ -14,7 +14,7 @@ const labels = [
       label: 'dsdasd',
       borderRadius:6,
       backgroundColor: 'hsl(10, 79%, 65%)',
-      borderColor: 'hsl(33, 100%, 98%)',
+      borderColor: 'none',
       data: [17.45, 34.91,52.36,31.07, 23.39, 43.28, 25.48],
     }]
   };

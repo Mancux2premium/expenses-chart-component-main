@@ -56,10 +56,50 @@ section{
     height: 500px;
     border-radius: 10px;
 }
+
 p{
     font-family: var(--Fontfamily);
     font-size: 1.5em;
     padding: 20px;
     color: var(--Darkbrown);
 
+}
+.containerThismonth{
+    display: flex;
+    width: 340px;
+    border-top: 3px solid var(--Cream);
+    margin: 30px auto;
+    justify-content: space-between;
+}
+.saldoThismonth{
+    display: flex;
+    flex-direction: column;
+}
+.titleThismonth{
+    color: var(--Mediumbrown);
+    font-family: var(--Fontfamily);
+    font-size: 0.8em;
+    padding: 0;
+
+}
+.numberThismonth{
+    margin: 0;
+    color: var(--Darkbrown);
+    font-family: var(--Fontfamily);
+    font-size: 1.9em;
+    padding: 0;
+
+}
+
+.containerLastmonth{
+    margin: 0;
+    padding: 0;
+    text-align: end;
+    font-family: var(--Fontfamily);
+    color: var(--Darkbrown);
+}
+span{
+    color: var(--Mediumbrown);
+    font-family: var(--Fontfamily);
+    font-size: 0.7em;
 }
