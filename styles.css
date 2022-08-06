@@ -70,6 +70,7 @@ p{
     border-top: 3px solid var(--Cream);
     margin: 30px auto;
     justify-content: space-between;
+    padding-top: 20px;
 }
 .saldoThismonth{
     display: flex;
