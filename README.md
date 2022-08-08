@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Netlify]([https://your-live-site-url.com](https://chart-main.netlify.app/))
+- Live Site URL: [Netlify](https://chart-main.netlify.app/)
 
 
 ### Built with
