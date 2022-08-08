@@ -1,13 +1,7 @@
-/* const labels = [
-    'mon',
-    'tue',
-    'wed',
-    'thu',
-    'fri',
-    'sat',
-    'sun'
-  ]; */
-const gastos =[
+const colorToday = 'hsl(186, 34%, 60%)';
+const colorDayAll = 'hsl(10, 79%, 65%)';
+
+/* const gastos =[
   {
     "day": "mon",
     "amount": 17.45
@@ -43,7 +37,6 @@ for(i=0;i<gastos.length;i++){
   amount.push(gastos[i].amount)
   day.push(gastos[i].day)
 }
-/* const jsonData = JSON.parse(gastos) */
 
   const data = {
      labels: day,
@@ -67,4 +60,16 @@ for(i=0;i<gastos.length;i++){
   const myChart = new Chart(
     document.getElementById('myChart'),
     config
-  );
+  ); */
+
+  let fecha = new Date ();
+  console.log(fecha.getDay());
+  console.log(fecha.getDate());
+  console.log(fecha.getFullYear());
+
+  let diaSemana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado']
+  let diaSemana2 = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado']
+  if(diaSemana[fecha.getDay()] == diaSemana2[fecha.getDay()]){
+    console.log("hola");
+  }
+  console.log(diaSemana[fecha.getDay()]);
