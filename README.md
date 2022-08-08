@@ -12,9 +12,6 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
   - [Author](#author)
 
 
-
-
-
 ### The challenge
 
 Users should be able to:
@@ -51,9 +48,7 @@ Users should be able to:
 
 ```js
 if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
-  colorsDay.fill('hsl(186, 34%, 60%)',
-  fecha.getDay()-1,
-  fecha.getDay());
+  colorsDay.fill('hsl(186, 34%, 60%)', fecha.getDay()-1,fecha.getDay());
 }
 ```
 
