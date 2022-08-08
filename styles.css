@@ -52,7 +52,7 @@ h2{
 
 section{
     background-color:var(--Verypaleorange) ;
-    height: 500px;
+    height: 480px;
     border-radius: 10px;
 }
 
@@ -69,7 +69,7 @@ p{
     border-top: 3px solid var(--Cream);
     margin: 30px auto;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 .saldoThismonth{
     display: flex;
@@ -102,4 +102,7 @@ span{
     color: var(--Mediumbrown);
     font-family: var(--Fontfamily);
     font-size: 0.7em;
+}
+.grafico{
+    cursor: pointer;
 }
