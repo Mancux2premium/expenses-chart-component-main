@@ -37,7 +37,6 @@ for(i=0;i<gastos.length;i++){
   amount.push(gastos[i].amount)
   day.push(gastos[i].day)
 }
-console.log(day)
 let fecha = new Date ();
 let diaSemana = ["sun","mon","tue","wed","thu","fri","sat"]
 
