@@ -1,4 +1,4 @@
-let colorsDay= ['hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)'];
+let colorsDay= ['hsl(10, 79%, 65%)','hsl(10, 79%, 65%)','hsl(10, 79%, 65%)','hsl(10, 79%, 65%)','hsl(10, 79%, 65%)','hsl(10, 79%, 65%)','hsl(10, 79%, 65%)'];
 
 const gastos =[
   {
@@ -39,20 +39,20 @@ for(i=0;i<gastos.length;i++){
 }
 console.log(day)
 let fecha = new Date ();
-
 let diaSemana = ["sun","mon","tue","wed","thu","fri","sat"]
 
 if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
+  colorsDay.fill('hsl(186, 34%, 60%)',fecha.getDay()-1,fecha.getDay());
+
    
-   console.log('hola');
-  tres = 'blue';
 }
+
   const data = {
      labels: day,
       datasets: [{
       label: 'Gastos diarios',
       borderRadius:6,
-      backgroundColor: colorsDay[2],
+      backgroundColor: [colorsDay[0],colorsDay[1],colorsDay[2],colorsDay[3],colorsDay[4],colorsDay[5],colorsDay[6]],
       hoverBackgroundColor:'hsl(186, 34%, 60%)',
       borderColor: 'none',
       data: amount
