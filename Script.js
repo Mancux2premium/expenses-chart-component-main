@@ -1,7 +1,6 @@
-const colorToday = 'hsl(186, 34%, 60%)';
-const colorDayAll = 'hsl(10, 79%, 65%)';
+let colorsDay= ['hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)','hsl(186, 34%, 60%)'];
 
-/* const gastos =[
+const gastos =[
   {
     "day": "mon",
     "amount": 17.45
@@ -30,6 +29,7 @@ const colorDayAll = 'hsl(10, 79%, 65%)';
     "day": "sun",
     "amount": 25.48
   }
+  
 ]
 const amount =[];
 const day = [];
@@ -37,13 +37,22 @@ for(i=0;i<gastos.length;i++){
   amount.push(gastos[i].amount)
   day.push(gastos[i].day)
 }
+console.log(day)
+let fecha = new Date ();
 
+let diaSemana = ["sun","mon","tue","wed","thu","fri","sat"]
+
+if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
+   
+   console.log('hola');
+  tres = 'blue';
+}
   const data = {
      labels: day,
       datasets: [{
       label: 'Gastos diarios',
       borderRadius:6,
-      backgroundColor: ['hsl(10, 79%, 65%)'],
+      backgroundColor: colorsDay[2],
       hoverBackgroundColor:'hsl(186, 34%, 60%)',
       borderColor: 'none',
       data: amount
@@ -60,16 +69,6 @@ for(i=0;i<gastos.length;i++){
   const myChart = new Chart(
     document.getElementById('myChart'),
     config
-  ); */
+  );
 
-  let fecha = new Date ();
-  console.log(fecha.getDay());
-  console.log(fecha.getDate());
-  console.log(fecha.getFullYear());
-
-  let diaSemana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado']
-  let diaSemana2 = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado']
-  if(diaSemana[fecha.getDay()] == diaSemana2[fecha.getDay()]){
-    console.log("hola");
-  }
-  console.log(diaSemana[fecha.getDay()]);
+ 
