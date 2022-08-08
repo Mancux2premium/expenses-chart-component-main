@@ -51,6 +51,7 @@ for(i=0;i<gastos.length;i++){
       label: 'Gastos diarios',
       borderRadius:6,
       backgroundColor: ['hsl(10, 79%, 65%)'],
+      hoverBackgroundColor:'hsl(186, 34%, 60%)',
       borderColor: 'none',
       data: amount
     }]
