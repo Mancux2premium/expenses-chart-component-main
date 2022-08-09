@@ -114,22 +114,19 @@ span{
     font-family: var(--Fontfamily);
     font-size: 0.7em;
 }
-.grafico{
-    cursor: pointer;
-}
 
 @media (min-width: 1440px){
     
     .mainContainer{
-        width: 375px;
+        width: 530px;
     }
 
     .balanceStyle{
-        width: 375px;
+        width: 530px;
     }
     
     section{
-        height: 480px;
+        height: 500px;
     }
 
     p{
@@ -137,6 +134,6 @@ span{
     }
 
     .containerThismonth{
-        width: 340px;
+        width: 500px;
     }
 }

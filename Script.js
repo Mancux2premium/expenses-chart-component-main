@@ -31,7 +31,9 @@ const gastos =[
   }
   
 ]
-
+function titleToolTip(tooltipItems) {
+  return "";
+}
 
 const amount =[];
 const day = [];
@@ -57,33 +59,35 @@ if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
       data:amount
     }]
   };
-
+  Chart.defaults.font.size = 15;
+  Chart.defaults.font.family = '"DM Sans", sans-serif';
 
   const myChart = new Chart(
     document.getElementById('myChart'),{
       type: 'bar',
       data: data,
-      options:{ 
-        /*Copied code from  @c-o-d-e visit your profile https://www.frontendmentor.io/profile/c-o-d-e  */
-        onHover: (event, chartElement) => {
+      options:{
+         /*Copied code from  @c-o-d-e visit your profile https://www.frontendmentor.io/profile/c-o-d-e  */
+         onHover: (event, chartElement) => {
           event.native.target.style.cursor =
               chartElement.length == 1 ? "pointer" : "default";
           /****************************************************/
         },
-      },
-       options:{
         scales: {
             x: {
                 grid: {
                     display: false,
+                    drawBorder: false,
                 },
             },
             y: {
                 grid: {
                     display: false,
+                    drawBorder: false,/*Elimina los bordesl del grafico*/
                 },
                 ticks: {
-                    display: false,
+                    display: false, /*oculta los numeros*/
+                  
                 },
             },
         },
@@ -93,6 +97,28 @@ if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
                 display: false,
                
             },
+            tooltip: {
+              yAlign: "bottom",
+              displayColors: false,
+              callbacks: {
+                title: titleToolTip,
+                label: function (context) {
+                  let label = context.dataset.label || "";
+                  if (label) {
+                    label += ": ";
+                  }
+                  if (context.parsed.y !== null) {
+                    label += new Intl.NumberFormat("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    }).format(context.parsed.y);
+                  }
+                  return label;
+                },
+                
+              },
+            },
+              
         },
     },
     }
