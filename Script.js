@@ -31,22 +31,21 @@ const gastos =[
   }
   
 ]
+
+
 const amount =[];
 const day = [];
+
 for(i=0;i<gastos.length;i++){
   amount.push(gastos[i].amount)
   day.push(gastos[i].day)
 }
-console.log(day)
 let fecha = new Date ();
 let diaSemana = ["sun","mon","tue","wed","thu","fri","sat"]
-
 if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
   colorsDay.fill('hsl(186, 34%, 60%)',fecha.getDay()-1,fecha.getDay());
-
    
 }
-
   const data = {
      labels: day,
       datasets: [{
@@ -59,18 +58,44 @@ if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
     }]
   };
 
-  const config = {
-    type: 'bar',
-    data: data,
-    options: {
-      
-    }
-  };
-
 
   const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
+    document.getElementById('myChart'),{
+      type: 'bar',
+      data: data,
+      options:{ 
+        /*Copied code from  @c-o-d-e visit your profile https://www.frontendmentor.io/profile/c-o-d-e  */
+        onHover: (event, chartElement) => {
+          event.native.target.style.cursor =
+              chartElement.length == 1 ? "pointer" : "default";
+          /****************************************************/
+        },
+      },
+       options:{
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
+                },
+                ticks: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: { display: false },
+            title: {
+                display: false,
+               
+            },
+        },
+    },
+    }
   );
 
  
