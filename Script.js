@@ -50,10 +50,10 @@ if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
   const data = {
      labels: day,
       datasets: [{
-      label: "Gastos diarios",
+      label: "",
       borderRadius:6,
       backgroundColor: [colorsDay[0],colorsDay[1],colorsDay[2],colorsDay[3],colorsDay[4],colorsDay[5],colorsDay[6]],
-      hoverBackgroundColor:'hsl(186, 34%, 60%)',
+      hoverBackgroundColor:'hsl(10, 79%, 85%)',
       borderColor: 'none',
       data:amount
     }]
