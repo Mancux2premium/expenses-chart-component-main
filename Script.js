@@ -31,22 +31,22 @@ const gastos =[
   }
   
 ]
+
+
 const amount =[];
 const day = [];
+
 for(i=0;i<gastos.length;i++){
   amount.push(gastos[i].amount)
   day.push(gastos[i].day)
 }
-console.log(day)
 let fecha = new Date ();
 let diaSemana = ["sun","mon","tue","wed","thu","fri","sat"]
 
 if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
   colorsDay.fill('hsl(186, 34%, 60%)',fecha.getDay()-1,fecha.getDay());
-
    
 }
-
   const data = {
      labels: day,
       datasets: [{
@@ -58,13 +58,21 @@ if(diaSemana[fecha.getDay()] == day[fecha.getDay()-1]){
       data:amount
     }]
   };
-
+const legen = {
+  legend: { display: false }
+}
   const config = {
     type: 'bar',
     data: data,
-    options: {
-      
-    }
+    options:{ 
+      /*Copied code from  @c-o-d-e visit your profile https://www.frontendmentor.io/profile/c-o-d-e  */
+      onHover: (event, chartElement) => {
+        event.native.target.style.cursor =
+            chartElement.length == 1 ? "pointer" : "default";
+        /****************************************************/
+      },
+    },
+   
   };
 
 
